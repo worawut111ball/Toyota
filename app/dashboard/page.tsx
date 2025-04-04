@@ -81,7 +81,7 @@ export default function DashboardPage() {
             <TabsTrigger value="warehouse">Warehouse Layout</TabsTrigger>
             <TabsTrigger value="stock">Stock Status</TabsTrigger>
             <TabsTrigger value="zone">Zone Statistics</TabsTrigger>
-            <TabsTrigger value="agv">AGV Status</TabsTrigger>
+            <TabsTrigger value="amr">AMR Status</TabsTrigger>
             <TabsTrigger value="task">Task Statistics</TabsTrigger>
           </TabsList>
 
@@ -291,7 +291,7 @@ export default function DashboardPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Active Jobs</CardTitle>
-                  <CardDescription>Currently active fleet jobs</CardDescription>
+                  <CardDescription>Currently active TMS jobs</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
@@ -299,7 +299,7 @@ export default function DashboardPage() {
                       <TableRow>
                         <TableHead>Job No</TableHead>
                         <TableHead>Type</TableHead>
-                        <TableHead>AGV</TableHead>
+                        <TableHead>AMR</TableHead>
                         <TableHead>From</TableHead>
                         <TableHead>To</TableHead>
                         <TableHead>Status</TableHead>
@@ -309,7 +309,7 @@ export default function DashboardPage() {
                       <TableRow>
                         <TableCell className="font-medium">JOB00001</TableCell>
                         <TableCell>Transfer</TableCell>
-                        <TableCell>AGV-3</TableCell>
+                        <TableCell>AMR-3</TableCell>
                         <TableCell>LOC-41</TableCell>
                         <TableCell>LOC-90</TableCell>
                         <TableCell>
@@ -319,7 +319,7 @@ export default function DashboardPage() {
                       <TableRow>
                         <TableCell className="font-medium">JOB00002</TableCell>
                         <TableCell>Pickup</TableCell>
-                        <TableCell>AGV-4</TableCell>
+                        <TableCell>AMR-4</TableCell>
                         <TableCell>LOC-79</TableCell>
                         <TableCell>LOC-61</TableCell>
                         <TableCell>
@@ -339,7 +339,7 @@ export default function DashboardPage() {
                       <TableRow>
                         <TableCell className="font-medium">JOB00004</TableCell>
                         <TableCell>Transfer</TableCell>
-                        <TableCell>AGV-2</TableCell>
+                        <TableCell>AMR-2</TableCell>
                         <TableCell>LOC-44</TableCell>
                         <TableCell>LOC-99</TableCell>
                         <TableCell>
@@ -364,8 +364,8 @@ export default function DashboardPage() {
               {/* AGV Status */}
               <Card>
                 <CardHeader>
-                  <CardTitle>AGV Status</CardTitle>
-                  <CardDescription>Current status of all AGVs</CardDescription>
+                  <CardTitle>AMR Status</CardTitle>
+                  <CardDescription>Current status of all AMRs</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -373,7 +373,7 @@ export default function DashboardPage() {
                       <div className="flex items-center gap-4">
                         <Robot className="h-6 w-6 text-primary" />
                         <div>
-                          <p className="font-medium">AGV-1</p>
+                          <p className="font-medium">AMR-1</p>
                         </div>
                       </div>
                       <Badge className="bg-amber-100 text-amber-800">charging</Badge>
@@ -382,7 +382,7 @@ export default function DashboardPage() {
                       <div className="flex items-center gap-4">
                         <Robot className="h-6 w-6 text-primary" />
                         <div>
-                          <p className="font-medium">AGV-2</p>
+                          <p className="font-medium">AMR-2</p>
                         </div>
                       </div>
                       <Badge className="bg-green-100 text-green-800">idle</Badge>
@@ -391,7 +391,7 @@ export default function DashboardPage() {
                       <div className="flex items-center gap-4">
                         <Robot className="h-6 w-6 text-primary" />
                         <div>
-                          <p className="font-medium">AGV-3</p>
+                          <p className="font-medium">AMR-3</p>
                         </div>
                       </div>
                       <Badge className="bg-green-100 text-green-800">idle</Badge>
@@ -400,7 +400,7 @@ export default function DashboardPage() {
                       <div className="flex items-center gap-4">
                         <Robot className="h-6 w-6 text-primary" />
                         <div>
-                          <p className="font-medium">AGV-4</p>
+                          <p className="font-medium">AMR-4</p>
                         </div>
                       </div>
                       <Badge className="bg-red-100 text-red-800">maintenance</Badge>
@@ -409,7 +409,7 @@ export default function DashboardPage() {
                       <div className="flex items-center gap-4">
                         <Robot className="h-6 w-6 text-primary" />
                         <div>
-                          <p className="font-medium">AGV-5</p>
+                          <p className="font-medium">AMR-5</p>
                         </div>
                       </div>
                       <Badge className="bg-amber-100 text-amber-800">charging</Badge>
@@ -552,7 +552,7 @@ export default function DashboardPage() {
                               <span className="text-sm font-medium">68%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-sm">Active AGVs:</span>
+                              <span className="text-sm">Active AMRs:</span>
                               <span className="text-sm font-medium">5</span>
                             </div>
                           </div>
@@ -563,7 +563,7 @@ export default function DashboardPage() {
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2">
                               <div className="h-2 w-2 rounded-full bg-green-500"></div>
-                              <span>AGV-3 moved to Storage Area B</span>
+                              <span>AMR-3 moved to Storage Area B</span>
                             </div>
                             <div className="flex items-center gap-2">
                               <div className="h-2 w-2 rounded-full bg-amber-500"></div>
@@ -914,18 +914,18 @@ export default function DashboardPage() {
           </TabsContent>
 
           {/* AGV Status Tab */}
-          <TabsContent value="agv">
+          <TabsContent value="amr">
             <div className="grid gap-6 md:grid-cols-3">
               <Card className="md:col-span-2">
                 <CardHeader>
-                  <CardTitle>AGV Fleet Status</CardTitle>
+                  <CardTitle>AMR TMS Status</CardTitle>
                   <CardDescription>Real-time status of all automated guided vehicles</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>AGV ID</TableHead>
+                        <TableHead>AMR ID</TableHead>
                         <TableHead>Type</TableHead>
                         <TableHead>Current Location</TableHead>
                         <TableHead>Battery</TableHead>
@@ -936,7 +936,7 @@ export default function DashboardPage() {
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="font-medium">AGV-1</TableCell>
+                        <TableCell className="font-medium">AMR-1</TableCell>
                         <TableCell>Forklift</TableCell>
                         <TableCell>Charging Station 2</TableCell>
                         <TableCell>
@@ -954,7 +954,7 @@ export default function DashboardPage() {
                         <TableCell>98.5%</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">AGV-2</TableCell>
+                        <TableCell className="font-medium">AMR-2</TableCell>
                         <TableCell>Tow</TableCell>
                         <TableCell>Storage Zone A</TableCell>
                         <TableCell>
@@ -972,7 +972,7 @@ export default function DashboardPage() {
                         <TableCell>99.1%</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">AGV-3</TableCell>
+                        <TableCell className="font-medium">AMR-3</TableCell>
                         <TableCell>Forklift</TableCell>
                         <TableCell>Production Line 1</TableCell>
                         <TableCell>
@@ -990,7 +990,7 @@ export default function DashboardPage() {
                         <TableCell>97.8%</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">AGV-4</TableCell>
+                        <TableCell className="font-medium">AMR-4</TableCell>
                         <TableCell>Tow</TableCell>
                         <TableCell>Maintenance Bay</TableCell>
                         <TableCell>
@@ -1008,7 +1008,7 @@ export default function DashboardPage() {
                         <TableCell>94.2%</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">AGV-5</TableCell>
+                        <TableCell className="font-medium">AMR-5</TableCell>
                         <TableCell>Forklift</TableCell>
                         <TableCell>Charging Station 1</TableCell>
                         <TableCell>
@@ -1032,13 +1032,13 @@ export default function DashboardPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>AGV Performance</CardTitle>
+                  <CardTitle>AMR Performance</CardTitle>
                   <CardDescription>Operational metrics and statistics</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
                     <div>
-                      <h3 className="mb-2 text-sm font-medium">Fleet Utilization</h3>
+                      <h3 className="mb-2 text-sm font-medium">TMS Utilization</h3>
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-full rounded-full bg-gray-200">
                           <div className="h-2 w-[72%] rounded-full bg-blue-500"></div>
@@ -1070,7 +1070,7 @@ export default function DashboardPage() {
                     </div>
 
                     <div>
-                      <h3 className="mb-2 text-sm font-medium">AGV Status Distribution</h3>
+                      <h3 className="mb-2 text-sm font-medium">AMR Status Distribution</h3>
                       <div className="grid grid-cols-2 gap-2">
                         <div className="rounded-md border p-2 text-center">
                           <div className="text-xs text-muted-foreground">Working</div>

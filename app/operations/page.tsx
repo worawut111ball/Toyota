@@ -663,7 +663,7 @@ export default function OperationsPage() {
                   <TableBody>
                     <TableRow>
                       <TableCell>Robot AMR-04 downtime</TableCell>
-                      <TableCell>Robot Fleet</TableCell>
+                      <TableCell>Robot TMS</TableCell>
                       <TableCell>Medium - Reduced capacity by 25%</TableCell>
                       <TableCell>
                         <Badge className="bg-amber-500">In Progress</Badge>

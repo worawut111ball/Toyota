@@ -82,14 +82,14 @@ export default function RobotsPage() {
     <Layout>
       <div className="container py-8">
         <div className="mb-6 flex items-center justify-between px-4">
-          <h1 className="text-3xl font-bold">Robot Fleet Management</h1>
+          <h1 className="text-3xl font-bold">Robot TMS Management</h1>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           <div className="md:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle>Robot Fleet</CardTitle>
+                <CardTitle>Robot TMS</CardTitle>
                 <CardDescription>Status of all robots in the system</CardDescription>
               </CardHeader>
               <CardContent>
